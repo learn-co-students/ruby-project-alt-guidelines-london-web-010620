@@ -6,7 +6,6 @@ quit = false
 cli.opening
 
 
-
 while quit == false
     select_forest = cli.select_forest
     forest_map = Forest.all.map {|forest| forest.location}
@@ -70,31 +69,19 @@ while quit == false
             forest.chopchopchop
         end
 
-        # if chosen_method == "12"
-        #     bushfire
-        # end
+        if chosen_method == "12"
+            # binding.pry
+            Launchy.open("https://mkc.org.au/donations/trcqld?fbclid=IwAR0rr1zoIESFkw4RmHUFzEHF2porTFue3vLc4f0NXCriBPRuOlV17LZQMJY")
+        end
 
-    
-
+        if chosen_method == "13"
+            # begin
+            #     exit
+            # rescue SystemExit
+            #     puts "See ya!"
+            # end
+            quit = true
+        end
 
 end
-
-
-
-
-
-
-
-
-
-
-
-# working 
-# windy("Delamere Forest")
-# autumn("Sherwood Forest")
-# winter("Sherwood Forest")
-# summer("Sherwood Forest")
-# spring("Dalby Forest")
-# plant_tree
-# see_trees("Dalby Forest")
 

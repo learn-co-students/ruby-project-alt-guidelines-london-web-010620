@@ -10,11 +10,16 @@ class CommandLineInterface
           |   |  |   |  | ||   |___ |   |___ |   _   ||       ||   |_| ||   |_| ||   |___ |   |  | |
           |___|  |___|  |_||_______||_______||__| |__||_______||_______||_______||_______||___|  |_|    
     "
-    puts "Welcome to TreeHugger (a different one), the best resource for fictitious tree and forest information on the 7th floor of WeWork Moorgate!"
+    puts "----------------------------------------------------------------------------------------------------------------------------------"
+    puts "Welcome to TreeHugger, the best resource for fictitious tree and forest information on the 7th floor of WeWork Finsbury Pavement!"
+    puts "----------------------------------------------------------------------------------------------------------------------------------"
     end
 
     def select_forest
+        puts "-__-__-__-__-__-__-__-__-__-__-__-__-__-__-__-__-"
         puts "Enter a number to visit the corresponding forest."
+        puts "_--_--_--_--_--_--_--_--_--_--_--_--_--_--_--_--_"
+
 
         Forest.all.each_with_index do |forest, index|
             number = index + 1 #make it human readable
@@ -42,20 +47,18 @@ class CommandLineInterface
         3. Send some wind
         4. Set it to Spring
         5. Set to Summer
-        6. Set to Auntumn
+        6. Set to Autumn
         7. Set to Winter
         8. See density
         9. See average _leaf-age_
         10. Chop down a tree
         11. Chop down the forest
-        12. Bushfire!!!"
+        12. Bushfire!!!
+        13. Leave the forest"
+        # 14. exit
 
         methods_input = gets.chomp
         methods_input
 
     end
 end
-
-
-
-
